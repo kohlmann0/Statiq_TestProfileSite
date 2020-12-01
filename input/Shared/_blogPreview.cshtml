@@ -1,0 +1,8 @@
+<div class="panel panel-default">
+    <div class="panel-heading d-flex justifty-context-between panel-title">
+        <div><h2>{{ .Title }}</h2></div><div class=""> {{ dateFormat "2006-01-02" .Date}}</div>
+    </div>
+    <div class="panel-body lead blogPreview">
+        {{ .Summary }}
+    </div>
+</div>

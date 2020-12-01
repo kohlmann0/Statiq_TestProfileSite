@@ -1,0 +1,90 @@
+<html lang="en">
+@Html.Partial("_header", "Michael Kohlmann Consulting")
+<body>
+@Html.Partial("_navbar", "home")
+<!-- Home Landing Page -->
+<div id="home" class="home"> 
+  <div class="container text-vcenter">
+    <div class="row">
+	  <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <div class="panel panel-default text-center home-inner color-secondary">
+          <h1>Michael Kohlmann</h1>
+          <h4>Engineer.
+          Developer.
+          Problem Solver.
+          </h4>
+          <h2 class="color-secondary"><a href="#services" class="btn btn-lg">Services</a>
+          <a href="#blog" class="btn btn-lg">Blog</a>
+          <a href="./about" class="btn btn-lg">About</a></h2>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
+<!-- /Home -->
+<!-- Services Section -->
+<div id="services" class="pad-section color-primary">
+  <div class="container">
+    <h2 class="text-center">Services</h2> <hr />
+    <div class="row text-center">
+      <div class="col-sm-3 col-xs-6">
+	    <a href="#services">
+			<i class="fas fa-code fa-5x"> </i>
+			<h4>Software</h4>
+			<p>Custom software architecture, engineering, and design.</p>
+		</a>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <a href="#services">
+			<i class="fas fa-cogs fa-5x"> </i>
+			<h4>Mechanical</h4>
+			<p>Custom mechanical engineering, drafting/modeling, and prototyping.</p>
+		</a>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+	    <a href="#services">
+			<i class="fas fa-industry fa-5x"> </i>
+			<h4>Automation/Robotics</h4>
+			<p>Industrial automation, robotics, and artificial intelligence.</p>
+	    </a>
+	  </div>
+      <div class="col-sm-3 col-xs-6">
+	    <a href="#services">
+			<i class="fas fa-project-diagram fa-5x"> </i>
+			<h4>Management</h4>
+			<p>Project, product, or team management.</p>
+		</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Services -->
+
+<!-- Blog Information -->
+<div id="blog" class="pad-section">
+  <div class="container">
+    <div class="row">
+	  <div class="col-xs-12">
+		<div class="panel panel-default text-center">
+		  <div class="panel-heading">
+			<h3>Latest from the <a href="/blog">Blog</a></h3>
+		  </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="row">
+    @* {{ range first 2 .Data.Pages }} *@
+    <div class="col-sm-6">  
+      <a href="{{.URL}}">
+        @* {{ partial "blogPreview" . }}  *@
+      </a>
+    </div>
+    @* {{ end }} *@
+	</div>
+  </div>
+</div>
+<!-- /Blog section -->
+@Html.Partial("_footer")
+</body>
+</html>
